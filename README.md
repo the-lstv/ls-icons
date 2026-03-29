@@ -4,7 +4,7 @@
 LS.Icons is an open-source icon library designed by Lukas, primarily for [LS](https://github.com/the-lstv/LS), but available for anyone.<br>
 This is the 3rd major version after a long time and is **still work in progress**.
 
-<img width="391" height="478" alt="Screenshot from 2026-03-29 19-54-41" src="https://cdn.extragon.cloud/file/ed9df0eae6275dc8.webp" />
+<img width="391" height="478" alt="Screenshot from 2026-03-29 19-54-41" src="https://github.com/user-attachments/assets/a66b6b63-dcde-436f-9e08-90015b636cad" />
 
 ## Changes compared to 2.0
 - Removed outline-thin and fill-bold styles for simplicity.
