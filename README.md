@@ -12,3 +12,11 @@ This is the 3rd version after a long time and is **still work in progress**.
 - Updated icon font with woff2.
 - An updated style.
 - Removed all legacy icons.
+
+If you have an idea, please let me know and I'll be happy to help you out!
+
+---
+
+<img src=https://cdn.extragon.cloud/file/a771e02dfb37f618.svg> <br>
+All icons are hand-made by a human.<br>
+Licensed under the GPL-3.0 License.
