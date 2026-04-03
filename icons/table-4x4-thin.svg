@@ -1,0 +1,63 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_11095_6039" fill="white">
+<path d="M2 7H7V12H2V7Z"/>
+</mask>
+<path d="M7 12V13H8V12H7ZM2 12H1V13H2V12ZM7 7H6V12H7H8V7H7ZM7 12V11H2V12V13H7V12ZM2 12H3V7H2H1V12H2Z" fill="white" mask="url(#path-1-inside-1_11095_6039)"/>
+<mask id="path-3-inside-2_11095_6039" fill="white">
+<path d="M2 12H7V17H2V12Z"/>
+</mask>
+<path d="M7 17V18H8V17H7ZM2 17H1V18H2V17ZM7 12H6V17H7H8V12H7ZM7 17V16H2V17V18H7V17ZM2 17H3V12H2H1V17H2Z" fill="white" mask="url(#path-3-inside-2_11095_6039)"/>
+<mask id="path-5-inside-3_11095_6039" fill="white">
+<path d="M2 17H7V22H5C3.34315 22 2 20.6569 2 19V17Z"/>
+</mask>
+<path d="M2 17H7H2M8 23H5C2.79086 23 1 21.2091 1 19H3C3 20.1046 3.89543 21 5 21H6L8 23ZM5 23C2.79086 23 1 21.2091 1 19V17H3V19C3 20.1046 3.89543 21 5 21V23ZM8 17V23L6 21V17H8Z" fill="white" mask="url(#path-5-inside-3_11095_6039)"/>
+<path d="M5 2.5H6.5V6.5H2.5V5C2.5 3.61929 3.61929 2.5 5 2.5Z" stroke="white"/>
+<mask id="path-8-inside-4_11095_6039" fill="white">
+<path d="M7 7H12V12H7V7Z"/>
+</mask>
+<path d="M12 12V13H13V12H12ZM12 7H11V12H12H13V7H12ZM12 12V11H7V12V13H12V12Z" fill="white" mask="url(#path-8-inside-4_11095_6039)"/>
+<mask id="path-10-inside-5_11095_6039" fill="white">
+<path d="M7 12H12V17H7V12Z"/>
+</mask>
+<path d="M12 17V18H13V17H12ZM12 12H11V17H12H13V12H12ZM12 17V16H7V17V18H12V17Z" fill="white" mask="url(#path-10-inside-5_11095_6039)"/>
+<mask id="path-12-inside-6_11095_6039" fill="white">
+<path d="M7 17H12V22H7V17Z"/>
+</mask>
+<path d="M12 22V23H13V22H12ZM12 17H11V22H12H13V17H12ZM12 22V21H7V22V23H12V22Z" fill="white" mask="url(#path-12-inside-6_11095_6039)"/>
+<mask id="path-14-inside-7_11095_6039" fill="white">
+<path d="M12 7H17V12H12V7Z"/>
+</mask>
+<path d="M17 12V13H18V12H17ZM17 7H16V12H17H18V7H17ZM17 12V11H12V12V13H17V12Z" fill="white" mask="url(#path-14-inside-7_11095_6039)"/>
+<mask id="path-16-inside-8_11095_6039" fill="white">
+<path d="M12 12H17V17H12V12Z"/>
+</mask>
+<path d="M17 17V18H18V17H17ZM17 12H16V17H17H18V12H17ZM17 17V16H12V17V18H17V17Z" fill="white" mask="url(#path-16-inside-8_11095_6039)"/>
+<mask id="path-18-inside-9_11095_6039" fill="white">
+<path d="M12 17H17V22H12V17Z"/>
+</mask>
+<path d="M17 22V23H18V22H17ZM17 17H16V22H17H18V17H17ZM17 22V21H12V22V23H17V22Z" fill="white" mask="url(#path-18-inside-9_11095_6039)"/>
+<mask id="path-20-inside-10_11095_6039" fill="white">
+<path d="M17 7H22V12H17V7Z"/>
+</mask>
+<path d="M22 12V13H23V12H22ZM22 7H21V12H22H23V7H22ZM22 12V11H17V12V13H22V12Z" fill="white" mask="url(#path-20-inside-10_11095_6039)"/>
+<mask id="path-22-inside-11_11095_6039" fill="white">
+<path d="M17 12H22V17H17V12Z"/>
+</mask>
+<path d="M22 17V18H23V17H22ZM22 12H21V17H22H23V12H22ZM22 17V16H17V17V18H22V17Z" fill="white" mask="url(#path-22-inside-11_11095_6039)"/>
+<mask id="path-24-inside-12_11095_6039" fill="white">
+<path d="M17 17H22V19C22 20.6569 20.6569 22 19 22H17V17Z"/>
+</mask>
+<path d="M17 17H22H17M23 19C23 21.2091 21.2091 23 19 23H17V21H19C20.1046 21 21 20.1046 21 19H23ZM21 19M17 22V17V22M23 17V19C23 21.2091 21.2091 23 19 23V21C20.1046 21 21 20.1046 21 19V17H23Z" fill="white" mask="url(#path-24-inside-12_11095_6039)"/>
+<mask id="path-26-inside-13_11095_6039" fill="white">
+<path d="M7 2H12V7H7V2Z"/>
+</mask>
+<path d="M12 2H13V1H12V2ZM12 7V8H13V7H12ZM7 2V3H12V2V1H7V2ZM12 2H11V7H12H13V2H12ZM12 7V6H7V7V8H12V7Z" fill="white" mask="url(#path-26-inside-13_11095_6039)"/>
+<mask id="path-28-inside-14_11095_6039" fill="white">
+<path d="M12 2H17V7H12V2Z"/>
+</mask>
+<path d="M17 2H18V1H17V2ZM17 7V8H18V7H17ZM12 2V3H17V2V1H12V2ZM17 2H16V7H17H18V2H17ZM17 7V6H12V7V8H17V7Z" fill="white" mask="url(#path-28-inside-14_11095_6039)"/>
+<mask id="path-30-inside-15_11095_6039" fill="white">
+<path d="M17 2H19C20.6569 2 22 3.34315 22 5V7H17V2Z"/>
+</mask>
+<path d="M17 1H19C21.2091 1 23 2.79086 23 5H21C21 3.89543 20.1046 3 19 3H17V1ZM23 8H17V6H21L23 8ZM21 6M17 7V2V7M19 1C21.2091 1 23 2.79086 23 5V8L21 6V5C21 3.89543 20.1046 3 19 3V1Z" fill="white" mask="url(#path-30-inside-15_11095_6039)"/>
+</svg>
