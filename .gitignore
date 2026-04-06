@@ -1,0 +1,4 @@
+*.zip
+icons/misc
+misc/*
+!misc/sort.sh
