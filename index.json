@@ -1,698 +1,2026 @@
 [
   {
     "name": "axis-arrows",
-    "keywords": ["coordinates", "direction", "move", "arrows"],
-    "categories": ["navigation", "geometry"],
+    "keywords": [
+      "coordinates",
+      "direction",
+      "move",
+      "arrows"
+    ],
+    "categories": [
+      "navigation",
+      "geometry"
+    ],
     "aliases": []
   },
   {
     "name": "axis",
-    "keywords": ["coordinates", "geometry", "line"],
-    "categories": ["geometry"],
+    "keywords": [
+      "coordinates",
+      "geometry",
+      "line"
+    ],
+    "categories": [
+      "geometry"
+    ],
     "aliases": []
   },
   {
     "name": "box-alt",
-    "keywords": ["container", "package", "cube"],
-    "categories": ["objects", "storage"],
+    "keywords": [
+      "container",
+      "package",
+      "cube"
+    ],
+    "categories": [
+      "objects",
+      "storage"
+    ],
     "aliases": []
   },
   {
     "name": "box",
-    "keywords": ["container", "package", "cube", "square"],
-    "categories": ["objects", "storage"],
+    "keywords": [
+      "container",
+      "package",
+      "cube",
+      "square"
+    ],
+    "categories": [
+      "objects",
+      "storage"
+    ],
     "aliases": []
   },
   {
     "name": "brand-discord",
-    "keywords": ["discord", "brand", "logo", "chat"],
-    "categories": ["brands", "social"],
+    "keywords": [
+      "discord",
+      "brand",
+      "logo",
+      "chat"
+    ],
+    "categories": [
+      "brands",
+      "social"
+    ],
     "aliases": []
   },
   {
     "name": "briefcase",
-    "keywords": ["work", "business", "portfolio"],
-    "categories": ["objects", "business"],
+    "keywords": [
+      "work",
+      "business",
+      "portfolio"
+    ],
+    "categories": [
+      "objects",
+      "business"
+    ],
     "aliases": []
   },
   {
     "name": "calculator",
-    "keywords": ["math", "arithmetic", "finance"],
-    "categories": ["tools", "education"],
+    "keywords": [
+      "math",
+      "arithmetic",
+      "finance"
+    ],
+    "categories": [
+      "tools",
+      "education"
+    ],
     "aliases": []
   },
   {
     "name": "camera",
-    "keywords": ["photo", "image", "picture", "photography"],
-    "categories": ["media", "devices"],
+    "keywords": [
+      "photo",
+      "image",
+      "picture",
+      "photography"
+    ],
+    "categories": [
+      "media",
+      "devices"
+    ],
     "aliases": []
   },
   {
     "name": "camera-video",
-    "keywords": ["video", "film", "record", "media"],
-    "categories": ["media", "devices"],
-    "aliases": ["video-camera", "camcorder"]
+    "keywords": [
+      "video",
+      "film",
+      "record",
+      "media"
+    ],
+    "categories": [
+      "media",
+      "devices"
+    ],
+    "aliases": [
+      "video-camera",
+      "camcorder"
+    ]
   },
   {
     "name": "chat-teardrop",
-    "keywords": ["chat", "message", "conversation", "bubble"],
-    "categories": ["communication"],
-    "aliases": ["message-teardrop"]
+    "keywords": [
+      "chat",
+      "message",
+      "conversation",
+      "bubble"
+    ],
+    "categories": [
+      "communication"
+    ],
+    "aliases": [
+      "message-teardrop"
+    ]
   },
   {
     "name": "check-circle",
-    "keywords": ["check", "circle", "done", "success", "approve"],
-    "categories": ["status", "ui"],
-    "aliases": ["approved"]
+    "keywords": [
+      "check",
+      "circle",
+      "done",
+      "success",
+      "approve"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
+    "aliases": [
+      "approved"
+    ]
   },
   {
     "name": "check-small",
-    "keywords": ["check", "tick", "small", "approve"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "check",
+      "tick",
+      "small",
+      "approve"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "check",
-    "keywords": ["tick", "approve", "correct", "yes"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "tick",
+      "approve",
+      "correct",
+      "yes"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "complex-wave",
-    "keywords": ["wave", "signal", "frequency", "audio"],
-    "categories": ["audio", "science"],
+    "keywords": [
+      "wave",
+      "signal",
+      "frequency",
+      "audio"
+    ],
+    "categories": [
+      "audio",
+      "science"
+    ],
     "aliases": []
   },
   {
     "name": "cup",
-    "keywords": ["drink", "mug", "beverage", "coffee", "tea"],
-    "categories": ["food and drink"],
+    "keywords": [
+      "drink",
+      "mug",
+      "beverage",
+      "coffee",
+      "tea"
+    ],
+    "categories": [
+      "food and drink"
+    ],
     "aliases": []
   },
   {
     "name": "cursor",
-    "keywords": ["pointer", "mouse", "select"],
-    "categories": ["ui", "navigation"],
+    "keywords": [
+      "pointer",
+      "mouse",
+      "select"
+    ],
+    "categories": [
+      "ui",
+      "navigation"
+    ],
     "aliases": []
   },
   {
     "name": "dash-circle",
-    "keywords": ["minus", "circle", "remove", "delete"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "minus",
+      "circle",
+      "remove",
+      "delete"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "dash",
-    "keywords": ["minus", "subtract", "remove", "hyphen"],
-    "categories": ["status", "ui"],
-    "aliases": ["minus"]
+    "keywords": [
+      "minus",
+      "subtract",
+      "remove",
+      "hyphen"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
+    "aliases": [
+      "minus"
+    ]
   },
   {
     "name": "egg",
-    "keywords": ["food", "breakfast", "ingredient"],
-    "categories": ["food and drink"],
+    "keywords": [
+      "food",
+      "breakfast",
+      "ingredient"
+    ],
+    "categories": [
+      "food and drink"
+    ],
     "aliases": []
   },
   {
     "name": "envelope",
-    "keywords": ["email", "mail", "message", "letter"],
-    "categories": ["communication"],
+    "keywords": [
+      "email",
+      "mail",
+      "message",
+      "letter"
+    ],
+    "categories": [
+      "communication"
+    ],
     "aliases": []
   },
   {
     "name": "exclamation-circle",
-    "keywords": ["alert", "warning", "exclamation", "circle"],
-    "categories": ["status", "ui"],
-    "aliases": ["warning-circle"]
+    "keywords": [
+      "alert",
+      "warning",
+      "exclamation",
+      "circle"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
+    "aliases": [
+      "warning-circle"
+    ]
   },
   {
     "name": "exclamation-diamond",
-    "keywords": ["alert", "warning", "exclamation", "diamond"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "alert",
+      "warning",
+      "exclamation",
+      "diamond"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "exclamation",
-    "keywords": ["alert", "danger", "exclamation"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "alert",
+      "danger",
+      "exclamation"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "exclamation-triangle",
-    "keywords": ["alert", "warning", "exclamation", "triangle"],
-    "categories": ["status", "ui"],
-    "aliases": ["warning-triangle"]
+    "keywords": [
+      "alert",
+      "warning",
+      "exclamation",
+      "triangle"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
+    "aliases": [
+      "warning-triangle"
+    ]
   },
   {
     "name": "eye",
-    "keywords": ["see", "view", "watch", "visibility"],
-    "categories": ["ui", "actions"],
-    "aliases": ["show", "preview"]
+    "keywords": [
+      "see",
+      "view",
+      "watch",
+      "visibility"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": [
+      "show",
+      "preview"
+    ]
   },
   {
     "name": "funnel",
-    "keywords": ["filter", "sort", "refine"],
-    "categories": ["tools", "ui"],
+    "keywords": [
+      "filter",
+      "sort",
+      "refine"
+    ],
+    "categories": [
+      "tools",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "headphones",
-    "keywords": ["audio", "music", "listen", "sound"],
-    "categories": ["audio", "devices"],
+    "keywords": [
+      "audio",
+      "music",
+      "listen",
+      "sound"
+    ],
+    "categories": [
+      "audio",
+      "devices"
+    ],
     "aliases": []
   },
   {
     "name": "house",
-    "keywords": ["home", "building", "residence"],
-    "categories": ["objects", "places"],
-    "aliases": ["home"]
+    "keywords": [
+      "home",
+      "building",
+      "residence"
+    ],
+    "categories": [
+      "objects",
+      "places"
+    ],
+    "aliases": [
+      "home"
+    ]
   },
   {
     "name": "info-circle",
-    "keywords": ["info", "information", "details", "circle"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "info",
+      "information",
+      "details",
+      "circle"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "info",
-    "keywords": ["info", "information", "details"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "info",
+      "information",
+      "details"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "layers",
-    "keywords": ["stack", "depth", "multiple", "layers"],
-    "categories": ["design", "ui"],
+    "keywords": [
+      "stack",
+      "depth",
+      "multiple",
+      "layers"
+    ],
+    "categories": [
+      "design",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "lifebuoy",
-    "keywords": ["support", "help", "rescue", "float"],
-    "categories": ["safety", "help"],
-    "aliases": ["life-ring"]
+    "keywords": [
+      "support",
+      "help",
+      "rescue",
+      "float"
+    ],
+    "categories": [
+      "safety",
+      "help"
+    ],
+    "aliases": [
+      "life-ring"
+    ]
   },
   {
     "name": "lightning",
-    "keywords": ["electricity", "energy", "flash"],
-    "categories": ["weather", "energy"],
-    "aliases": ["bolt"]
+    "keywords": [
+      "electricity",
+      "energy",
+      "flash"
+    ],
+    "categories": [
+      "weather",
+      "energy"
+    ],
+    "aliases": [
+      "bolt"
+    ]
   },
   {
     "name": "link-break",
-    "keywords": ["unlink", "disconnect", "broken link"],
-    "categories": ["ui", "actions"],
-    "aliases": ["broken-link"]
+    "keywords": [
+      "unlink",
+      "disconnect",
+      "broken link"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": [
+      "broken-link"
+    ]
   },
   {
     "name": "link",
-    "keywords": ["url", "hyperlink", "attach"],
-    "categories": ["ui", "actions"],
+    "keywords": [
+      "url",
+      "hyperlink",
+      "attach"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
     "aliases": []
   },
   {
     "name": "list",
-    "keywords": ["ordered", "bullets", "tasks"],
-    "categories": ["text", "ui"],
-    "aliases": ["list-ul", "list-ol"]
+    "keywords": [
+      "ordered",
+      "bullets",
+      "tasks"
+    ],
+    "categories": [
+      "text",
+      "ui"
+    ],
+    "aliases": [
+      "list-ul",
+      "list-ol"
+    ]
   },
   {
     "name": "loading-circle",
-    "keywords": ["loading", "progress", "wait", "spinner"],
-    "categories": ["status", "ui"],
-    "aliases": ["spinner", "progress"]
+    "keywords": [
+      "loading",
+      "progress",
+      "wait",
+      "spinner"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
+    "aliases": [
+      "spinner",
+      "progress"
+    ]
   },
   {
     "name": "location-dot",
-    "keywords": ["location", "gps", "pin", "marker"],
-    "categories": ["navigation", "maps"],
-    "aliases": ["map-pin", "marker"]
+    "keywords": [
+      "location",
+      "gps",
+      "pin",
+      "marker"
+    ],
+    "categories": [
+      "navigation",
+      "maps"
+    ],
+    "aliases": [
+      "map-pin",
+      "marker"
+    ]
   },
   {
     "name": "magic-wand",
-    "keywords": ["magic", "edit", "wizard", "effects"],
-    "categories": ["tools", "design"],
+    "keywords": [
+      "magic",
+      "edit",
+      "wizard",
+      "effects"
+    ],
+    "categories": [
+      "tools",
+      "design"
+    ],
     "aliases": []
   },
   {
-    "name": "magnyfing-glass",
-    "keywords": ["search", "find", "zoom"],
-    "categories": ["ui", "navigation"],
-    "aliases": ["magnifier", "search"]
+    "name": "magnifying-glass",
+    "keywords": [
+      "search",
+      "find",
+      "zoom"
+    ],
+    "categories": [
+      "ui",
+      "navigation"
+    ],
+    "aliases": [
+      "magnifier",
+      "search"
+    ]
   },
   {
     "name": "maximize",
-    "keywords": ["expand", "full screen", "enlarge"],
-    "categories": ["ui", "actions"],
+    "keywords": [
+      "expand",
+      "full screen",
+      "enlarge"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
     "aliases": []
   },
   {
     "name": "microphone",
-    "keywords": ["audio", "record", "voice", "sound"],
-    "categories": ["audio", "devices"],
+    "keywords": [
+      "audio",
+      "record",
+      "voice",
+      "sound"
+    ],
+    "categories": [
+      "audio",
+      "devices"
+    ],
     "aliases": []
   },
   {
     "name": "minimize",
-    "keywords": ["collapse", "reduce", "shrink"],
-    "categories": ["ui", "actions"],
+    "keywords": [
+      "collapse",
+      "reduce",
+      "shrink"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
     "aliases": []
   },
   {
     "name": "monitor",
-    "keywords": ["display", "screen", "computer"],
-    "categories": ["devices", "technology"],
-    "aliases": ["screen", "display"]
+    "keywords": [
+      "display",
+      "screen",
+      "computer"
+    ],
+    "categories": [
+      "devices",
+      "technology"
+    ],
+    "aliases": [
+      "screen",
+      "display"
+    ]
   },
   {
     "name": "mountains",
-    "keywords": ["nature", "landscape", "travel"],
-    "categories": ["nature", "places"],
+    "keywords": [
+      "nature",
+      "landscape",
+      "travel"
+    ],
+    "categories": [
+      "nature",
+      "places"
+    ],
     "aliases": []
   },
   {
     "name": "notepad",
-    "keywords": ["notes", "write", "pad", "memo"],
-    "categories": ["text", "files"],
-    "aliases": ["notes", "memo"]
+    "keywords": [
+      "notes",
+      "write",
+      "pad",
+      "memo"
+    ],
+    "categories": [
+      "text",
+      "files"
+    ],
+    "aliases": [
+      "notes",
+      "memo"
+    ]
   },
   {
     "name": "note",
-    "keywords": ["notes", "message", "write"],
-    "categories": ["text", "files"],
+    "keywords": [
+      "notes",
+      "message",
+      "write"
+    ],
+    "categories": [
+      "text",
+      "files"
+    ],
     "aliases": []
   },
   {
     "name": "package",
-    "keywords": ["box", "shipment", "delivery"],
-    "categories": ["objects", "shipping"],
+    "keywords": [
+      "box",
+      "shipment",
+      "delivery"
+    ],
+    "categories": [
+      "objects",
+      "shipping"
+    ],
     "aliases": []
   },
   {
     "name": "paintbrush",
-    "keywords": ["paint", "art", "draw", "brush"],
-    "categories": ["art", "design"],
-    "aliases": ["brush"]
+    "keywords": [
+      "paint",
+      "art",
+      "draw",
+      "brush"
+    ],
+    "categories": [
+      "art",
+      "design"
+    ],
+    "aliases": [
+      "brush"
+    ]
   },
   {
     "name": "paper-lines",
-    "keywords": ["paper", "document", "lines", "notes"],
-    "categories": ["text", "files"],
-    "aliases": ["lined-paper"]
+    "keywords": [
+      "paper",
+      "document",
+      "lines",
+      "notes"
+    ],
+    "categories": [
+      "text",
+      "files"
+    ],
+    "aliases": [
+      "lined-paper"
+    ]
   },
   {
     "name": "pause",
-    "keywords": ["media", "stop", "wait"],
-    "categories": ["media", "controls"],
+    "keywords": [
+      "media",
+      "stop",
+      "wait"
+    ],
+    "categories": [
+      "media",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "people",
-    "keywords": ["group", "users", "team"],
-    "categories": ["social", "users"],
-    "aliases": ["group", "users"]
+    "keywords": [
+      "group",
+      "users",
+      "team"
+    ],
+    "categories": [
+      "social",
+      "users"
+    ],
+    "aliases": [
+      "group",
+      "users"
+    ]
   },
   {
     "name": "person",
-    "keywords": ["user", "individual", "profile"],
-    "categories": ["social", "users"],
-    "aliases": ["user"]
+    "keywords": [
+      "user",
+      "individual",
+      "profile"
+    ],
+    "categories": [
+      "social",
+      "users"
+    ],
+    "aliases": [
+      "user"
+    ]
   },
   {
     "name": "phone",
-    "keywords": ["call", "telephone", "contact", "mobile"],
-    "categories": ["communication", "devices"],
+    "keywords": [
+      "call",
+      "telephone",
+      "contact",
+      "mobile"
+    ],
+    "categories": [
+      "communication",
+      "devices"
+    ],
     "aliases": []
   },
   {
     "name": "picture-frame",
-    "keywords": ["image", "photo", "picture"],
-    "categories": ["media", "art"],
+    "keywords": [
+      "image",
+      "photo",
+      "picture"
+    ],
+    "categories": [
+      "media",
+      "art"
+    ],
     "aliases": []
   },
   {
     "name": "play",
-    "keywords": ["media", "start", "begin"],
-    "categories": ["media", "controls"],
+    "keywords": [
+      "media",
+      "start",
+      "begin"
+    ],
+    "categories": [
+      "media",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "plus-circle",
-    "keywords": ["add", "plus", "create", "circle"],
-    "categories": ["ui", "actions"],
+    "keywords": [
+      "add",
+      "plus",
+      "create",
+      "circle"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
     "aliases": []
   },
   {
     "name": "plus",
-    "keywords": ["add", "create", "new"],
-    "categories": ["ui", "actions"],
+    "keywords": [
+      "add",
+      "create",
+      "new"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
     "aliases": []
   },
   {
     "name": "pointer",
-    "keywords": ["mouse", "select", "cursor"],
-    "categories": ["ui", "navigation"],
+    "keywords": [
+      "mouse",
+      "select",
+      "cursor"
+    ],
+    "categories": [
+      "ui",
+      "navigation"
+    ],
     "aliases": []
   },
   {
     "name": "question-circle",
-    "keywords": ["question", "help", "support", "circle"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "question",
+      "help",
+      "support",
+      "circle"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "question",
-    "keywords": ["question", "help", "support"],
-    "categories": ["status", "ui"],
+    "keywords": [
+      "question",
+      "help",
+      "support"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "ram",
-    "keywords": ["memory", "hardware", "computer"],
-    "categories": ["devices", "technology"],
+    "keywords": [
+      "memory",
+      "hardware",
+      "computer"
+    ],
+    "categories": [
+      "devices",
+      "technology"
+    ],
     "aliases": []
   },
   {
     "name": "saw-wave",
-    "keywords": ["audio", "wave", "signal", "synth"],
-    "categories": ["audio", "science"],
+    "keywords": [
+      "audio",
+      "wave",
+      "signal",
+      "synth"
+    ],
+    "categories": [
+      "audio",
+      "science"
+    ],
     "aliases": []
   },
   {
     "name": "sd-card",
-    "keywords": ["storage", "memory", "card", "device"],
-    "categories": ["devices", "files"],
+    "keywords": [
+      "storage",
+      "memory",
+      "card",
+      "device"
+    ],
+    "categories": [
+      "devices",
+      "files"
+    ],
     "aliases": []
   },
   {
     "name": "shopping-bag-alt",
-    "keywords": ["shopping", "bag", "buy", "shop"],
-    "categories": ["commerce", "shopping"],
+    "keywords": [
+      "shopping",
+      "bag",
+      "buy",
+      "shop"
+    ],
+    "categories": [
+      "commerce",
+      "shopping"
+    ],
     "aliases": []
   },
   {
     "name": "shopping-bag",
-    "keywords": ["shopping", "bag", "buy", "purse"],
-    "categories": ["commerce", "shopping"],
+    "keywords": [
+      "shopping",
+      "bag",
+      "buy",
+      "purse"
+    ],
+    "categories": [
+      "commerce",
+      "shopping"
+    ],
     "aliases": []
   },
   {
     "name": "sine-wave",
-    "keywords": ["audio", "wave", "signal", "sine"],
-    "categories": ["audio", "science"],
+    "keywords": [
+      "audio",
+      "wave",
+      "signal",
+      "sine"
+    ],
+    "categories": [
+      "audio",
+      "science"
+    ],
     "aliases": []
   },
   {
     "name": "skull",
-    "keywords": ["danger", "death", "pirate", "poison"],
-    "categories": ["status", "danger"],
+    "keywords": [
+      "danger",
+      "death",
+      "pirate",
+      "poison"
+    ],
+    "categories": [
+      "status",
+      "danger"
+    ],
     "aliases": []
   },
   {
     "name": "soundwave",
-    "keywords": ["audio", "sound", "wave", "signal"],
-    "categories": ["audio", "science"],
+    "keywords": [
+      "audio",
+      "sound",
+      "wave",
+      "signal"
+    ],
+    "categories": [
+      "audio",
+      "science"
+    ],
     "aliases": []
   },
   {
     "name": "square-wave",
-    "keywords": ["audio", "wave", "signal", "square"],
-    "categories": ["audio", "science"],
+    "keywords": [
+      "audio",
+      "wave",
+      "signal",
+      "square"
+    ],
+    "categories": [
+      "audio",
+      "science"
+    ],
     "aliases": []
   },
   {
     "name": "squiggle",
-    "keywords": ["wave", "line", "design"],
-    "categories": ["design", "art"],
+    "keywords": [
+      "wave",
+      "line",
+      "design"
+    ],
+    "categories": [
+      "design",
+      "art"
+    ],
     "aliases": []
   },
   {
     "name": "star",
-    "keywords": ["favorite", "bookmark", "rate", "star"],
-    "categories": ["ui", "status"],
-    "aliases": ["favorite"]
+    "keywords": [
+      "favorite",
+      "bookmark",
+      "rate",
+      "star"
+    ],
+    "categories": [
+      "ui",
+      "status"
+    ],
+    "aliases": [
+      "favorite"
+    ]
   },
   {
     "name": "stop",
-    "keywords": ["media", "end", "halt"],
-    "categories": ["media", "controls"],
+    "keywords": [
+      "media",
+      "end",
+      "halt"
+    ],
+    "categories": [
+      "media",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "switches",
-    "keywords": ["toggle", "switch", "control"],
-    "categories": ["ui", "controls"],
+    "keywords": [
+      "toggle",
+      "switch",
+      "control"
+    ],
+    "categories": [
+      "ui",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "switch-off",
-    "keywords": ["toggle", "switch", "off", "disable"],
-    "categories": ["ui", "controls"],
+    "keywords": [
+      "toggle",
+      "switch",
+      "off",
+      "disable"
+    ],
+    "categories": [
+      "ui",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "switch-on",
-    "keywords": ["toggle", "switch", "on", "enable"],
-    "categories": ["ui", "controls"],
+    "keywords": [
+      "toggle",
+      "switch",
+      "on",
+      "enable"
+    ],
+    "categories": [
+      "ui",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "table-2x2",
-    "keywords": ["table", "grid", "data", "2x2"],
-    "categories": ["data", "tables"],
+    "keywords": [
+      "table",
+      "grid",
+      "data",
+      "2x2"
+    ],
+    "categories": [
+      "data",
+      "tables"
+    ],
     "aliases": []
   },
   {
     "name": "table-2x3",
-    "keywords": ["table", "grid", "data", "2x3"],
-    "categories": ["data", "tables"],
+    "keywords": [
+      "table",
+      "grid",
+      "data",
+      "2x3"
+    ],
+    "categories": [
+      "data",
+      "tables"
+    ],
     "aliases": []
   },
   {
     "name": "table-3x3",
-    "keywords": ["table", "grid", "data", "3x3"],
-    "categories": ["data", "tables"],
+    "keywords": [
+      "table",
+      "grid",
+      "data",
+      "3x3"
+    ],
+    "categories": [
+      "data",
+      "tables"
+    ],
     "aliases": []
   },
   {
     "name": "table-4x4",
-    "keywords": ["table", "grid", "data", "4x4"],
-    "categories": ["data", "tables"],
+    "keywords": [
+      "table",
+      "grid",
+      "data",
+      "4x4"
+    ],
+    "categories": [
+      "data",
+      "tables"
+    ],
     "aliases": []
   },
   {
     "name": "tag-2-d",
-    "keywords": ["tag", "label", "2D"],
-    "categories": ["tags", "labels"],
+    "keywords": [
+      "tag",
+      "label",
+      "2D"
+    ],
+    "categories": [
+      "tags",
+      "labels"
+    ],
     "aliases": []
   },
   {
     "name": "tag-3-d",
-    "keywords": ["tag", "label", "3D"],
-    "categories": ["tags", "labels"],
+    "keywords": [
+      "tag",
+      "label",
+      "3D"
+    ],
+    "categories": [
+      "tags",
+      "labels"
+    ],
     "aliases": []
   },
   {
     "name": "tag-4-d",
-    "keywords": ["tag", "label", "4D"],
-    "categories": ["tags", "labels"],
+    "keywords": [
+      "tag",
+      "label",
+      "4D"
+    ],
+    "categories": [
+      "tags",
+      "labels"
+    ],
     "aliases": []
   },
   {
     "name": "tag-4-k",
-    "keywords": ["tag", "label", "4K", "ultra hd"],
-    "categories": ["tags", "labels", "media"],
+    "keywords": [
+      "tag",
+      "label",
+      "4K",
+      "ultra hd"
+    ],
+    "categories": [
+      "tags",
+      "labels",
+      "media"
+    ],
     "aliases": []
   },
   {
     "name": "tag-8-k",
-    "keywords": ["tag", "label", "8K", "ultra hd"],
-    "categories": ["tags", "labels", "media"],
+    "keywords": [
+      "tag",
+      "label",
+      "8K",
+      "ultra hd"
+    ],
+    "categories": [
+      "tags",
+      "labels",
+      "media"
+    ],
     "aliases": []
   },
   {
     "name": "tag-ad",
-    "keywords": ["tag", "label", "ad", "advertisement"],
-    "categories": ["tags", "labels"],
+    "keywords": [
+      "tag",
+      "label",
+      "ad",
+      "advertisement"
+    ],
+    "categories": [
+      "tags",
+      "labels"
+    ],
     "aliases": []
   },
   {
     "name": "tag-ar",
-    "keywords": ["tag", "label", "ar", "augmented reality"],
-    "categories": ["tags", "labels", "technology"],
+    "keywords": [
+      "tag",
+      "label",
+      "ar",
+      "augmented reality"
+    ],
+    "categories": [
+      "tags",
+      "labels",
+      "technology"
+    ],
     "aliases": []
   },
   {
     "name": "tag-e",
-    "keywords": ["tag", "label", "e"],
-    "categories": ["tags", "labels"],
+    "keywords": [
+      "tag",
+      "label",
+      "e"
+    ],
+    "categories": [
+      "tags",
+      "labels"
+    ],
     "aliases": []
   },
   {
     "name": "tag-hd",
-    "keywords": ["tag", "label", "HD", "high definition"],
-    "categories": ["tags", "labels", "media"],
+    "keywords": [
+      "tag",
+      "label",
+      "HD",
+      "high definition"
+    ],
+    "categories": [
+      "tags",
+      "labels",
+      "media"
+    ],
     "aliases": []
   },
   {
     "name": "tag-sd",
-    "keywords": ["tag", "label", "SD", "standard definition"],
-    "categories": ["tags", "labels", "media"],
+    "keywords": [
+      "tag",
+      "label",
+      "SD",
+      "standard definition"
+    ],
+    "categories": [
+      "tags",
+      "labels",
+      "media"
+    ],
     "aliases": []
   },
   {
     "name": "tag-vr",
-    "keywords": ["tag", "label", "VR", "virtual reality"],
-    "categories": ["tags", "labels", "technology"],
+    "keywords": [
+      "tag",
+      "label",
+      "VR",
+      "virtual reality"
+    ],
+    "categories": [
+      "tags",
+      "labels",
+      "technology"
+    ],
     "aliases": []
   },
   {
     "name": "terminal",
-    "keywords": ["command", "console", "code", "cli"],
-    "categories": ["development", "tools"],
+    "keywords": [
+      "command",
+      "console",
+      "code",
+      "cli"
+    ],
+    "categories": [
+      "development",
+      "tools"
+    ],
     "aliases": []
   },
   {
     "name": "text",
-    "keywords": ["font", "type", "characters", "alphabet"],
-    "categories": ["text", "ui"],
+    "keywords": [
+      "font",
+      "type",
+      "characters",
+      "alphabet"
+    ],
+    "categories": [
+      "text",
+      "ui"
+    ],
     "aliases": []
   },
   {
     "name": "three-dots-horizontal",
-    "keywords": ["menu", "more", "ellipsis", "horizontal"],
-    "categories": ["ui", "actions"],
-    "aliases": ["ellipsis-horizontal"]
+    "keywords": [
+      "menu",
+      "more",
+      "ellipsis",
+      "horizontal"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": [
+      "ellipsis-horizontal"
+    ]
   },
   {
     "name": "three-dots",
-    "keywords": ["menu", "more", "ellipsis", "vertical"],
-    "categories": ["ui", "actions"],
-    "aliases": ["ellipsis", "ellipsis-vertical"]
+    "keywords": [
+      "menu",
+      "more",
+      "ellipsis",
+      "vertical"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": [
+      "ellipsis",
+      "ellipsis-vertical"
+    ]
   },
   {
     "name": "thumbs-down",
-    "keywords": ["dislike", "no", "down"],
-    "categories": ["status", "feedback"],
+    "keywords": [
+      "dislike",
+      "no",
+      "down"
+    ],
+    "categories": [
+      "status",
+      "feedback"
+    ],
     "aliases": []
   },
   {
     "name": "thumbs-up",
-    "keywords": ["like", "yes", "up"],
-    "categories": ["status", "feedback"],
+    "keywords": [
+      "like",
+      "yes",
+      "up"
+    ],
+    "categories": [
+      "status",
+      "feedback"
+    ],
     "aliases": []
   },
   {
     "name": "ticket",
-    "keywords": ["event", "pass", "admit", "ticket"],
-    "categories": ["events", "objects"],
+    "keywords": [
+      "event",
+      "pass",
+      "admit",
+      "ticket"
+    ],
+    "categories": [
+      "events",
+      "objects"
+    ],
     "aliases": []
   },
   {
     "name": "trash",
-    "keywords": ["delete", "remove", "bin", "garbage"],
-    "categories": ["ui", "actions"],
-    "aliases": ["delete", "bin"]
+    "keywords": [
+      "delete",
+      "remove",
+      "bin",
+      "garbage"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": [
+      "delete",
+      "bin"
+    ]
   },
   {
     "name": "tree",
-    "keywords": ["nature", "plant", "forest", "growth"],
-    "categories": ["nature", "plants"],
+    "keywords": [
+      "nature",
+      "plant",
+      "forest",
+      "growth"
+    ],
+    "categories": [
+      "nature",
+      "plants"
+    ],
     "aliases": []
   },
   {
     "name": "triangle-wave",
-    "keywords": ["audio", "wave", "signal", "triangle"],
-    "categories": ["audio", "science"],
+    "keywords": [
+      "audio",
+      "wave",
+      "signal",
+      "triangle"
+    ],
+    "categories": [
+      "audio",
+      "science"
+    ],
     "aliases": []
   },
   {
     "name": "volume-high",
-    "keywords": ["audio", "sound", "volume", "loud"],
-    "categories": ["audio", "controls"],
+    "keywords": [
+      "audio",
+      "sound",
+      "volume",
+      "loud"
+    ],
+    "categories": [
+      "audio",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "volume-low",
-    "keywords": ["audio", "sound", "volume", "quiet"],
-    "categories": ["audio", "controls"],
+    "keywords": [
+      "audio",
+      "sound",
+      "volume",
+      "quiet"
+    ],
+    "categories": [
+      "audio",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "volume",
-    "keywords": ["audio", "sound", "volume"],
-    "categories": ["audio", "controls"],
+    "keywords": [
+      "audio",
+      "sound",
+      "volume"
+    ],
+    "categories": [
+      "audio",
+      "controls"
+    ],
     "aliases": []
   },
   {
     "name": "volume-x",
-    "keywords": ["audio", "sound", "mute", "off", "volume"],
-    "categories": ["audio", "controls"],
-    "aliases": ["mute"]
+    "keywords": [
+      "audio",
+      "sound",
+      "mute",
+      "off",
+      "volume"
+    ],
+    "categories": [
+      "audio",
+      "controls"
+    ],
+    "aliases": [
+      "mute"
+    ]
   },
   {
     "name": "vr-headset",
-    "keywords": ["vr", "virtual reality", "goggles", "headset"],
-    "categories": ["devices", "technology"],
-    "aliases": ["virtual-reality-headset"]
+    "keywords": [
+      "vr",
+      "virtual reality",
+      "goggles",
+      "headset"
+    ],
+    "categories": [
+      "devices",
+      "technology"
+    ],
+    "aliases": [
+      "virtual-reality-headset"
+    ]
   },
   {
     "name": "waves",
-    "keywords": ["audio", "ocean", "water", "wave"],
-    "categories": ["nature", "sound"],
+    "keywords": [
+      "audio",
+      "ocean",
+      "water",
+      "wave"
+    ],
+    "categories": [
+      "nature",
+      "sound"
+    ],
     "aliases": []
   },
   {
     "name": "wifi-low",
-    "keywords": ["wifi", "wireless", "network", "signal", "low"],
-    "categories": ["network", "technology"],
+    "keywords": [
+      "wifi",
+      "wireless",
+      "network",
+      "signal",
+      "low"
+    ],
+    "categories": [
+      "network",
+      "technology"
+    ],
     "aliases": []
   },
   {
     "name": "wifi-medium",
-    "keywords": ["wifi", "wireless", "network", "signal", "medium"],
-    "categories": ["network", "technology"],
+    "keywords": [
+      "wifi",
+      "wireless",
+      "network",
+      "signal",
+      "medium"
+    ],
+    "categories": [
+      "network",
+      "technology"
+    ],
     "aliases": []
   },
   {
     "name": "wifi-none",
-    "keywords": ["wifi", "wireless", "network", "signal", "none", "off"],
-    "categories": ["network", "technology"],
+    "keywords": [
+      "wifi",
+      "wireless",
+      "network",
+      "signal",
+      "none",
+      "off"
+    ],
+    "categories": [
+      "network",
+      "technology"
+    ],
     "aliases": []
   },
   {
     "name": "wifi",
-    "keywords": ["wifi", "wireless", "network", "signal"],
-    "categories": ["network", "technology"],
+    "keywords": [
+      "wifi",
+      "wireless",
+      "network",
+      "signal"
+    ],
+    "categories": [
+      "network",
+      "technology"
+    ],
     "aliases": []
   },
   {
     "name": "wine-glass-alt",
-    "keywords": ["drink", "wine", "glass", "alcohol", "party"],
-    "categories": ["food and drink"],
+    "keywords": [
+      "drink",
+      "wine",
+      "glass",
+      "alcohol",
+      "party"
+    ],
+    "categories": [
+      "food and drink"
+    ],
     "aliases": []
   },
   {
     "name": "wine-glass",
-    "keywords": ["drink", "wine", "glass", "alcohol"],
-    "categories": ["food and drink"],
+    "keywords": [
+      "drink",
+      "wine",
+      "glass",
+      "alcohol"
+    ],
+    "categories": [
+      "food and drink"
+    ],
     "aliases": []
   },
   {
     "name": "x-circle",
-    "keywords": ["cancel", "close", "x", "delete", "circle"],
-    "categories": ["ui", "status"],
+    "keywords": [
+      "cancel",
+      "close",
+      "x",
+      "delete",
+      "circle"
+    ],
+    "categories": [
+      "ui",
+      "status"
+    ],
     "aliases": []
   },
   {
     "name": "x-small",
-    "keywords": ["close", "remove", "cancel", "x", "small"],
-    "categories": ["ui", "actions"],
+    "keywords": [
+      "close",
+      "remove",
+      "cancel",
+      "x",
+      "small"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
     "aliases": []
   },
   {
     "name": "x",
-    "keywords": ["close", "remove", "cancel", "delete"],
-    "categories": ["ui", "actions"],
-    "aliases": ["close"]
+    "keywords": [
+      "close",
+      "remove",
+      "cancel",
+      "delete"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": [
+      "close"
+    ]
+  },
+  {
+    "name": "download",
+    "keywords": [
+      "download",
+      "save",
+      "arrow",
+      "file"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "emotion-frown",
+    "keywords": [
+      "sad",
+      "emotion",
+      "face",
+      "frown"
+    ],
+    "categories": [
+      "emotions",
+      "ui"
+    ],
+    "aliases": [
+      "sad-face"
+    ]
+  },
+  {
+    "name": "emotion-smile",
+    "keywords": [
+      "happy",
+      "emotion",
+      "face",
+      "smile"
+    ],
+    "categories": [
+      "emotions",
+      "ui"
+    ],
+    "aliases": [
+      "happy-face"
+    ]
+  },
+  {
+    "name": "emotion-wink",
+    "keywords": [
+      "wink",
+      "emotion",
+      "face"
+    ],
+    "categories": [
+      "emotions",
+      "ui"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "return",
+    "keywords": [
+      "enter",
+      "return",
+      "keyboard",
+      "arrow"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": [
+      "enter-key"
+    ]
+  },
+  {
+    "name": "shape-circle-small",
+    "keywords": [
+      "shape",
+      "circle",
+      "small"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "shape-circle",
+    "keywords": [
+      "shape",
+      "circle",
+      "geometry"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "shape-diamond",
+    "keywords": [
+      "shape",
+      "diamond",
+      "geometry"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "shape-hexagon",
+    "keywords": [
+      "shape",
+      "hexagon",
+      "geometry"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "shape-octagon",
+    "keywords": [
+      "shape",
+      "octagon",
+      "geometry"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "shape-rectangle-small",
+    "keywords": [
+      "shape",
+      "rectangle",
+      "small"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "shape-rectangle",
+    "keywords": [
+      "shape",
+      "rectangle",
+      "geometry"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "shape-triangle",
+    "keywords": [
+      "shape",
+      "triangle",
+      "geometry"
+    ],
+    "categories": [
+      "geometry",
+      "design"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "sparkles",
+    "keywords": [
+      "magic",
+      "shine",
+      "stars",
+      "effects"
+    ],
+    "categories": [
+      "design",
+      "effects"
+    ],
+    "aliases": [
+      "glitter"
+    ]
+  },
+  {
+    "name": "star-circle",
+    "keywords": [
+      "star",
+      "favorite",
+      "circle"
+    ],
+    "categories": [
+      "ui",
+      "status"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "star-four",
+    "keywords": [
+      "star",
+      "sparkle",
+      "four-point"
+    ],
+    "categories": [
+      "design",
+      "icons"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "star-half",
+    "keywords": [
+      "star",
+      "half",
+      "rating"
+    ],
+    "categories": [
+      "ui",
+      "status"
+    ],
+    "aliases": [
+      "half-star"
+    ]
+  },
+  {
+    "name": "sticker",
+    "keywords": [
+      "sticker",
+      "label",
+      "decorative"
+    ],
+    "categories": [
+      "design",
+      "objects"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "upload",
+    "keywords": [
+      "upload",
+      "send",
+      "arrow",
+      "file"
+    ],
+    "categories": [
+      "ui",
+      "actions"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "x-octagon",
+    "keywords": [
+      "error",
+      "stop",
+      "x",
+      "octagon"
+    ],
+    "categories": [
+      "status",
+      "ui"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "brand-apple",
+    "keywords": [
+      "apple",
+      "brand",
+      "logo",
+      "technology"
+    ],
+    "categories": [
+      "brands",
+      "technology"
+    ],
+    "aliases": [
+      "apple-logo"
+    ],
+    "available_styles":[
+      "regular",
+      "fill",
+      "duotone"
+    ]
+  },
+  {
+    "name": "brand-google",
+    "keywords": [
+      "google",
+      "brand",
+      "logo",
+      "technology"
+    ],
+    "categories": [
+      "brands",
+      "technology"
+    ],
+    "available_styles": [
+      "fill",
+      "bold"
+    ],
+    "aliases": [
+      "google-logo"
+    ]
+  },
+  {
+    "name": "brand-lstv",
+    "keywords": [
+      "lstv",
+      "brand",
+      "logo",
+      "technology"
+    ],
+    "categories": [
+      "brands",
+      "technology"
+    ],
+    "available_styles": [
+      "fill",
+      "duotone"
+    ],
+    "aliases": [
+      "lstv-logo"
+    ]
+  },
+  {
+    "name": "midi-keyboard",
+    "keywords": [
+      "music",
+      "midi",
+      "keyboard",
+      "piano",
+      "controller",
+      "audio"
+    ],
+    "categories": [
+      "audio",
+      "devices",
+      "music"
+    ],
+    "aliases": [
+      "piano-keyboard",
+      "midi-controller"
+    ]
+  },
+  {
+    "name": "hitnex",
+    "available_styles": [
+      "fill"
+    ]
   }
 ]

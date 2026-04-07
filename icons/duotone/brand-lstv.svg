@@ -1,6 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 19.5205H20.0029L17.8037 15.6846H22V19.5205Z" fill="#616161"/>
-<path d="M22 14.3154H17.0176L14.6611 10.2051H22V14.3154Z" fill="#616161"/>
-<path d="M22 8.83594H13.876L11.6768 5H22V8.83594Z" fill="#616161"/>
+<path d="M22 19.5205H20.0029L17.8037 15.6846H22V19.5205Z" fill="white" fill-opacity="0.3"/>
+<path d="M22 14.3154H17.0176L14.6611 10.2051H22V14.3154Z" fill="white" fill-opacity="0.3"/>
+<path d="M22 8.83594H13.876L11.6768 5H22V8.83594Z" fill="white" fill-opacity="0.3"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3564 5L18.7119 19.5205H2L10.3564 5ZM6.32324 17.0205H14.3896L10.3555 10.0117L6.32324 17.0205Z" fill="white"/>
 </svg>

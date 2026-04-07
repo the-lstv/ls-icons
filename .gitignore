@@ -2,3 +2,4 @@
 icons/misc
 misc/*
 !misc/sort.sh
+!misc/process-css.js

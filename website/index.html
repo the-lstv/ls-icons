@@ -1,185 +1,781 @@
 <head>
-    @use(ls:5.2.9[flat, color, modal, animation], google-fonts[Poppins]);
+    @use(ls:5.2.9[flat, color, modal, menu, animation, range], google-fonts[Poppins]);
     @use("~/iconfont/style.css");
     @page font: "Poppins", sans-serif;
 </head>
 
-<body ls ls-accent="blue" ls-style="flat" ls-theme="dark" .level-0>
+<body ls ls-accent="aquamarine" ls-style="flat" ls-theme="dark" class="level-0">
+    <div class="app-shell level-1">
+        <header class="hero level-2">
+            <div class="hero-top">
+                <div>
+                    <h1>LS.Icons Beta</h1>
+                </div>
+            </div>
 
-    <header .level-1>
-        <input type="text" placeholder="Search icons..." id="searchInput">
-    </header>
+            <div class="controls level-1">
+                <input type="text" id="searchInput" placeholder="Search icons, aliases, keywords, categories..." autocomplete="off">
 
-    <main>
+                <ls-select id="categoryFilter" aria-label="Filter by category" ls-options-values="all">
+                    <ls-option value="all">All categories</ls-option>
+                </ls-select>
 
-    </main>
+                <ls-select id="sortMode" aria-label="Sort results" ls-options-values="name-asc,name-desc,category,keyword-count">
+                    <ls-option value="name-asc">Name A-Z</ls-option>
+                    <ls-option value="name-desc">Name Z-A</ls-option>
+                    <ls-option value="category">Category</ls-option>
+                    <ls-option value="keyword-count">Most keywords</ls-option>
+                </ls-select>
 
-    <template #iconIndex>
+                <label class="size-control" for="iconSize">
+                    <ls-range id="iconSize" label="Size" min="16" max="72" step="4" value="28"></ls-range>
+                </label>
+
+                <label class="crossed-control ls-switch" title="Toggle crossed icon modifier">
+                    <input id="crossedToggle" type="checkbox"> Slashed
+                    <span></span>
+                </label>
+            </div>
+
+            <div id="styleButtons" class="style-buttons"></div>
+        </header>
+
+        <main>
+            <div class="results-meta">
+                <small id="resultLabel">Showing 0 icons</small>
+                <button id="clearFilters" class="clear elevated">Clear filters</button>
+            </div>
+
+            <div id="emptyState" class="empty-state level-1" hidden>
+                <h2>No matches</h2>
+                <p>Try another keyword, category, or style.</p>
+            </div>
+
+            <div id="iconGrid" class="icon-grid" style="--icon-size: 28px"></div>
+
+            <section id="styleMismatch" class="mismatch-section level-1" hidden>
+                <div>
+                    <h2 id="styleMismatchTitle">Matches in other styles</h2>
+                    <p id="styleMismatchText"></p>
+                </div>
+                <div id="mismatchGrid" class="mismatch-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <template id="iconIndex">
         @importRaw ('~/index.json');
     </template>
 
     <style>
-        body {
-            height: 100vh;
-            max-height: 100vh;
-            overflow: hidden;
+        html,
+        body,
+        :root {
+            min-height: 100%;
         }
 
-        body, html, :root {
-            overflow: hidden !important;
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            background: var(--surface-n2);
+        }
+
+        .app-shell {
+            max-width: 1320px;
+            margin: 0 auto;
+            height: calc(100vh - 40px);
+            border-radius: var(--border-radius-xlarge);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: var(--surface-n1);
+            border: 1px solid var(--ui-border);
+            box-shadow:
+                0 12px 28px rgba(0, 0, 0, 0.18),
+                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+
+        .hero {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            background: var(--surface-1);
+            border-bottom: 1px solid var(--ui-border);
+        }
+
+        .hero-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(1.2rem, 1rem + 1.2vw, 2rem);
+            letter-spacing: 0.02em;
+        }
+
+        .hero p {
+            margin: 6px 0 0;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: minmax(230px, 1.4fr) 1fr 1fr auto auto;
+            gap: 12px;
+            align-items: center;
+            padding: 10px;
+            border-radius: var(--border-radius-large);
+            background: var(--surface-0);
+            border: 1px solid var(--ui-border);
+        }
+
+        .controls input,
+        .controls ls-select {
+            width: 100%;
+            min-width: 0;
+            background: var(--surface-n2);
+            color: var(--color);
+            font: inherit;
+        }
+
+        .controls input {
+            width: 100%;
+            min-width: 0;
+            padding: 10px 12px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--ui-border);
+            background: var(--surface-n2);
+            color: var(--color);
+            font: inherit;
+        }
+
+        .size-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 6px;
+        }
+
+        .size-control ls-range {
+            width: 200px;
+        }
+
+        .crossed-control {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .style-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .style-buttons button {
+            text-transform: capitalize;
+            border-radius: var(--border-radius-full);
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            letter-spacing: 0.03em;
+        }
+
+        .style-buttons button.active {
+            background: var(--accent-mix-30);
+            border-color: var(--accent-mix-50);
+            color: var(--accent-95);
         }
 
         main {
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
             overflow-y: auto;
-            padding: 16px;
-            height: 100%;
-        }
-
-        header {
-            padding: 16px;
-            display: flex;
-            gap: 16px;
-            flex-direction: column;
-            min-width: 0;
-
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.15);
-
-            input {
-                flex: 1;
-                padding: 8px 12px;
-                font-size: 14px;
-            }
-        }
-
-        .icon {
+            padding: 16px 22px 22px;
             display: flex;
             flex-direction: column;
+            gap: 12px;
+        }
+
+        .results-meta {
+            display: flex;
             align-items: center;
-            width: 80px;
-            cursor: pointer;
+            justify-content: space-between;
+            gap: 10px;
+            position: sticky;
+            top: -16px;
+            z-index: 4;
+            background: var(--surface-n1);
+            padding: 8px 2px;
         }
 
-        .icon i {
-            font-size: 24px;
-            min-height: 32px;
+        .results-meta small {
+            opacity: 0.85;
+            letter-spacing: 0.03em;
         }
 
-        .icon span {
-            margin-top: 8px;
-            font-size: 12px;
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            align-content: start;
+        }
+
+        .icon-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding: 14px 10px 12px;
+            border-radius: var(--border-radius-large);
+            background: var(--surface-0);
+            cursor: pointer;
+            min-height: 112px;
         }
 
-        .icon-container {
+        .icon-card:hover {
+            border: 3px solid var(--elevate-1);
+        }
+
+        .icon-card i {
+            font-size: var(--icon-size);
+            line-height: 1;
+        }
+
+        .icon-card .name {
+            font-size: small;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .empty-state {
+            border-radius: var(--border-radius-large);
+            padding: 28px;
+            text-align: center;
+            border: 1px dashed var(--ui-border);
+            background: var(--surface-1);
+        }
+
+        .empty-state h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .empty-state p {
+            margin: 8px 0 0;
+            opacity: 0.8;
+        }
+
+        .mismatch-section {
+            border-radius: var(--border-radius-large);
+            padding: 16px;
+            border: 1px solid var(--ui-border);
+            background: var(--surface-1);
             display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .preview-container {
-            display: flex;
-            justify-content: center;
+        .mismatch-section[hidden] {
+            display: none !important;
         }
 
-        .preview {
+        .mismatch-section h2 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .mismatch-section p {
+            margin: 6px 0 0;
+            opacity: 0.8;
+        }
+
+        .mismatch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .mismatch-note {
+            font-size: 0.74rem;
+            opacity: 0.8;
+            line-height: 1.3;
+        }
+
+        .preview-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .preview-pane {
+            min-height: 130px;
+            border-radius: var(--border-radius-medium);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
-            color: var(--base-20);
+            border: 1px solid color-mix(in srgb, var(--color) 14%, transparent);
+            font-size: 118px;
         }
 
-        [ls-theme="light"].preview.preview {
-            color: var(--base-80);
+        .preview-pane[ls-theme="dark"] {
+            color: var(--base-95);
+            background: var(--base-15);
+        }
+
+        .preview-pane[ls-theme="light"] {
+            color: var(--base-15);
+            background: var(--base-95);
+        }
+
+        .preview-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .preview-row i {
+            font-size: 30px;
+        }
+
+        .copy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .meta-line {
+            margin: 6px 0 0;
+            font-size: 0.86rem;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                padding: 10px;
+            }
+
+            .app-shell {
+                height: calc(100vh - 20px);
+            }
+
+            .hero {
+                padding: 14px;
+            }
+
+            .hero-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .controls {
+                grid-template-columns: 1fr;
+            }
+
+            .size-control {
+                justify-content: space-between;
+                padding: 0;
+            }
+
+            main {
+                padding: 10px 14px 14px;
+            }
+
+            .icon-grid {
+                grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+            }
+
+            .preview-layout,
+            .copy-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
     <script>
-        const container = document.querySelector('#iconIndex');
-        const iconIndex = container? JSON.parse(container.content.childNodes[0].textContent || '[]') : [];
+        const fallbackStyles = ["regular", "bold", "sharp", "fill", "sharp-fill", "duotone"];
 
-        const iconFuzz = iconIndex.map(icon => [icon.name, LS.Util.normalize(icon.name + (icon.aliases || []).join(' ') + ' ' + (icon.keywords || []).join(' ') + ' ' + (icon.categories || []).join(' '))]);
+        const searchInput = document.getElementById("searchInput");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const sortMode = document.getElementById("sortMode");
+        const iconSize = document.getElementById("iconSize");
+        const crossedToggle = document.getElementById("crossedToggle");
+        const iconGrid = document.getElementById("iconGrid");
+        const styleButtons = document.getElementById("styleButtons");
+        const resultLabel = document.getElementById("resultLabel");
+        const clearFilters = document.getElementById("clearFilters");
+        const emptyState = document.getElementById("emptyState");
+        const styleMismatch = document.getElementById("styleMismatch");
+        const styleMismatchTitle = document.getElementById("styleMismatchTitle");
+        const styleMismatchText = document.getElementById("styleMismatchText");
+        const mismatchGrid = document.getElementById("mismatchGrid");
 
-        const styles = ['regular', 'bold', 'fill', 'sharp', 'sharp-fill', 'duotone'];
-        let style = 'regular';
-
-        if(!LS.SelectOne) LS.SelectOne = LS.Tiny.O; // Fallback for older LS versions
-
-        LS.SelectOne("header").append(LS.Create({
-            tag: "ls-group",
-            class: "style-buttons",
-            inner: styles.map(style => ({
-                tag: "button",
-                text: style,
-
-                class: style === style ? '' : 'elevated',
-
-                onclick() {
-                    style = style;
-                    document.querySelectorAll('.icon i').forEach(i => {
-                        const name = i.parentElement.dataset.name;
-                        i.className = `ls-icon li-${name}-${style}`;
-                    });
-
-                    document.querySelectorAll('button').forEach(b => b.classList.add('elevated'));
-                    this.classList.remove('elevated');
-                }
-            }))
-        }))
-
-        const iconContainer = LS.Create('div', { class: 'icon-container' }).addTo(LS.SelectOne('main'));
-        for (const icon of iconIndex) {
-            const iconElement = LS.Create('div', { class: 'icon', inner: [
-                LS.Create('i', { class: `ls-icon li-${icon.name}-${style}` }),
-                LS.Create('span', { text: icon.name })
-            ], onclick() {
-                LS.Modal.buildEphemeral({
-                    title: icon.name,
-                    content: LS.Create('div', { inner: [
-                        {
-                            class: "preview-container",
-                            inner: [
-                                { class: "preview level-2", attributes: { "ls-theme": "dark"  }, accent: "white", inner: LS.Create('i', { class: `ls-icon li-${icon.name}-${style}`, style: 'font-size: 128px;' }) },
-                                { class: "preview level-2", attributes: { "ls-theme": "light" }, accent: "white", inner: LS.Create('i', { class: `ls-icon li-${icon.name}-${style}`, style: 'font-size: 128px;' }) },
-                            ]
-                        },
-
-                        { tag: "br" },
-                        { tag: "br" },
-                        styles.map(s => LS.Create('i', { class: `ls-icon li-${icon.name}-${s}`, style: 'font-size: 32px; margin-right: 8px;' })),
-                        LS.Create('p', { text: `Categories: ${icon.categories.join(', ')}` }),
-                        LS.Create('p', { text: `Keywords: ${icon.keywords.join(', ')}` }),
-                        LS.Create('p', { text: `Aliases: ${icon.aliases.join(', ')}` }),
-                    ]})
-                });
-            }});
-
-            iconElement.dataset.name = icon.name;
-
-            iconContainer.appendChild(iconElement);
+        function normalize(text) {
+            return LS.Util.normalize(text).replace(/(.)\1+/g, '$1');
         }
 
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', () => {
-            const query = LS.Util.normalize(searchInput.value);
+        const getIndexData = () => {
+            const template = document.getElementById("iconIndex");
+            const raw = template && template.content ? template.content.textContent : "[]";
+            try {
+                const parsed = JSON.parse(raw || "[]");
+                if (!Array.isArray(parsed)) {
+                    return [];
+                }
 
-            if(!query) {
-                document.querySelectorAll('.icon').forEach(icon => icon.style.display = 'flex');
-                return;
+                return parsed.map((icon) => ({
+                    name: icon.name,
+                    aliases: Array.isArray(icon.aliases) ? icon.aliases : [],
+                    keywords: Array.isArray(icon.keywords) ? icon.keywords : [],
+                    categories: Array.isArray(icon.categories) ? icon.categories : [],
+                    available_styles: Array.isArray(icon.available_styles) ? icon.available_styles : fallbackStyles
+                }));
+            } catch {
+                return [];
+            }
+        };
+
+        const iconIndex = getIndexData();
+        const searchable = iconIndex.map((icon) => ({
+            icon,
+            queryText: normalize([
+                icon.name,
+                icon.aliases.join(" "),
+                icon.keywords.join(" "),
+                icon.categories.join(" ")
+            ].join(" "))
+        }));
+
+        const state = {
+            query: "",
+            category: "all",
+            style: "regular",
+            sort: "name-asc",
+            size: 28,
+            crossed: false
+        };
+
+        const getIconClass = (iconName, style, crossed = state.crossed) => {
+            return `ls-icon li-${iconName} li-${style}${crossed ? " li-slashed" : ""}`;
+        };
+
+        const getAvailableStyles = (icon) => {
+            if (Array.isArray(icon.available_styles) && icon.available_styles.length) {
+                return icon.available_styles;
             }
 
-            for(const [name, data] of iconFuzz) {
-                const iconElement = document.querySelector(`.icon[data-name="${name}"]`);
-                if (data.includes(query)) {
-                    iconElement.style.display = 'flex';
-                } else {
-                    iconElement.style.display = 'none';
+            return fallbackStyles;
+        };
+
+        const supportsSelectedStyle = (icon) => {
+            return getAvailableStyles(icon).includes(state.style);
+        };
+
+        const getActiveStyle = (icon) => {
+            const styles = getAvailableStyles(icon);
+            return styles.includes(state.style) ? state.style : styles[0];
+        };
+
+        const updateCounts = (visibleCount) => {
+            resultLabel.textContent = `Showing ${visibleCount} icon${visibleCount === 1 ? "" : "s"}`;
+        };
+
+        const setMismatchVisibility = (show) => {
+            styleMismatch.hidden = !show;
+            styleMismatch.style.display = show ? "flex" : "none";
+            if (!show) {
+                styleMismatchText.textContent = "";
+                mismatchGrid.innerHTML = "";
+            }
+        };
+
+        const createStyleButtons = () => {
+            styleButtons.innerHTML = "";
+
+            for (const variant of fallbackStyles) {
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = variant === state.style ? "active" : "elevated";
+                button.textContent = variant;
+
+                button.addEventListener("click", () => {
+                    state.style = variant;
+                    createStyleButtons();
+                    renderIcons();
+                });
+
+                styleButtons.appendChild(button);
+            }
+        };
+
+        const createCategoryOptions = () => {
+            const categories = new Set();
+            for (const icon of iconIndex) {
+                for (const category of icon.categories) {
+                    categories.add(category);
                 }
             }
+
+            for (const category of Array.from(categories).sort()) {
+                const option = document.createElement("option");
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
+            }
+        };
+
+        const sortIcons = (icons) => {
+            const sorted = icons.slice();
+            if (state.sort === "name-desc") {
+                sorted.sort((a, b) => b.name.localeCompare(a.name));
+            } else if (state.sort === "category") {
+                sorted.sort((a, b) => {
+                    const ac = a.categories[0] || "";
+                    const bc = b.categories[0] || "";
+                    return ac.localeCompare(bc) || a.name.localeCompare(b.name);
+                });
+            } else if (state.sort === "keyword-count") {
+                sorted.sort((a, b) => b.keywords.length - a.keywords.length || a.name.localeCompare(b.name));
+            } else {
+                sorted.sort((a, b) => a.name.localeCompare(b.name));
+            }
+            return sorted;
+        };
+
+        const copyText = async (text, button) => {
+            try {
+                await navigator.clipboard.writeText(text);
+                if (button) {
+                    const original = button.textContent;
+                    button.textContent = "Copied";
+                    setTimeout(() => {
+                        button.textContent = original;
+                    }, 1100);
+                }
+            } catch {
+                if (button) {
+                    button.textContent = "Clipboard blocked";
+                }
+            }
+        };
+
+        const openIconPreview = (icon, previewStyle = getActiveStyle(icon)) => {
+            const iconStyles = getAvailableStyles(icon);
+            const activeClass = getIconClass(icon.name, previewStyle);
+            const snippet = `<i class=\"${activeClass}\"></i>`;
+
+            const content = LS.Create("div", {
+                inner: [
+                    {
+                        class: "preview-layout",
+                        inner: [
+                            {
+                                class: "preview-pane",
+                                attributes: { "ls-theme": "dark" },
+                                inner: LS.Create("i", { class: activeClass })
+                            },
+                            {
+                                class: "preview-pane",
+                                attributes: { "ls-theme": "light" },
+                                inner: LS.Create("i", { class: activeClass })
+                            }
+                        ]
+                    },
+                    {
+                        class: "preview-row",
+                        inner: iconStyles.map((variant) => ({
+                            tag: "i",
+                            class: getIconClass(icon.name, variant),
+                            title: variant
+                        }))
+                    },
+                    {
+                        class: "copy-grid",
+                        inner: [
+                            {
+                                tag: "button",
+                                class: "elevated",
+                                text: "Copy class",
+                                onclick() {
+                                    copyText(activeClass, this);
+                                }
+                            },
+                            {
+                                tag: "button",
+                                class: "elevated",
+                                text: "Copy HTML",
+                                onclick() {
+                                    copyText(snippet, this);
+                                }
+                            }
+                        ]
+                    },
+                    { tag: "p", class: "meta-line", text: `Categories: ${icon.categories.join(", ") || "n/a"}` },
+                    { tag: "p", class: "meta-line", text: `Keywords: ${icon.keywords.join(", ") || "n/a"}` },
+                    { tag: "p", class: "meta-line", text: `Aliases: ${icon.aliases.join(", ") || "n/a"}` }
+                ]
+            });
+
+            LS.Modal.buildEphemeral({
+                title: icon.name,
+                content
+            });
+        };
+
+        const buildCard = (icon, options = {}) => {
+            const card = document.createElement("article");
+            card.className = "icon-card";
+            card.dataset.name = icon.name;
+
+            const glyph = document.createElement("i");
+            glyph.className = getIconClass(icon.name, options.style || getActiveStyle(icon));
+
+            const label = document.createElement("div");
+            label.className = "name";
+            label.textContent = icon.name;
+
+            if (options.note) {
+                const note = document.createElement("div");
+                note.className = "mismatch-note";
+                note.textContent = options.note;
+                card.appendChild(note);
+            }
+
+            card.addEventListener("click", () => {
+                openIconPreview(icon, options.style || getActiveStyle(icon));
+            });
+
+            card.appendChild(glyph);
+            card.appendChild(label);
+            return card;
+        };
+
+        const renderIcons = () => {
+            const query = String(state.query || "");
+            const hasActiveSearch = query.trim().length > 0;
+            let filtered = searchable
+                .filter(({ icon, queryText }) => {
+                    const matchesQuery = !query || queryText.includes(query);
+                    const matchesCategory = state.category === "all" || icon.categories.includes(state.category);
+                    return matchesQuery && matchesCategory;
+                })
+                .map(({ icon }) => icon);
+
+            filtered = sortIcons(filtered);
+
+            const supported = filtered.filter((icon) => supportsSelectedStyle(icon));
+            const mismatched = filtered.filter((icon) => !supportsSelectedStyle(icon));
+
+            createStyleButtons();
+
+            iconGrid.innerHTML = "";
+            mismatchGrid.innerHTML = "";
+
+            const fragment = document.createDocumentFragment();
+            supported.forEach((icon) => {
+                fragment.appendChild(buildCard(icon, { style: state.style }));
+            });
+
+            iconGrid.appendChild(fragment);
+
+            const mismatchFragment = document.createDocumentFragment();
+            mismatched.forEach((icon) => {
+                const availableStyles = getAvailableStyles(icon);
+                const closestStyle = availableStyles[0] || fallbackStyles[0];
+                mismatchFragment.appendChild(buildCard(icon, {
+                    style: closestStyle,
+                    note: `Closest match: ${closestStyle}`
+                }));
+            });
+
+            mismatchGrid.appendChild(mismatchFragment);
+
+            const hasSupported = supported.length > 0;
+            const hasMismatched = hasActiveSearch && mismatched.length > 0;
+
+            emptyState.hidden = hasSupported || hasMismatched;
+            setMismatchVisibility(hasMismatched);
+            if (hasMismatched) {
+                styleMismatchTitle.textContent = `Matches in other styles`;
+                styleMismatchText.textContent = `The following icons match your search but aren't available in ${state.style} style. The closest match:`;
+            }
+
+            updateCounts(supported.length);
+        };
+
+        searchInput.addEventListener("input", () => {
+            state.query = normalize(searchInput.value);
+            renderIcons();
         });
+
+        categoryFilter.addEventListener("change", () => {
+            state.category = categoryFilter.value;
+            renderIcons();
+        });
+
+        sortMode.addEventListener("change", () => {
+            state.sort = sortMode.value;
+            renderIcons();
+        });
+
+        iconSize.addEventListener("input", () => {
+            state.size = Number(iconSize.value || 28);
+            iconGrid.style.setProperty("--icon-size", `${state.size}px`);
+        });
+
+        crossedToggle.addEventListener("change", () => {
+            state.crossed = !!crossedToggle.checked;
+            renderIcons();
+        });
+
+        clearFilters.addEventListener("click", () => {
+            state.query = "";
+            state.category = "all";
+            state.sort = "name-asc";
+            state.size = 28;
+            state.style = "regular";
+            state.crossed = false;
+            searchInput.value = "";
+            categoryFilter.value = "all";
+            sortMode.value = "name-asc";
+            iconSize.value = "28";
+            crossedToggle.checked = false;
+            iconGrid.style.setProperty("--icon-size", "28px");
+            renderIcons();
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "/" && document.activeElement !== searchInput) {
+                event.preventDefault();
+                searchInput.focus();
+            }
+
+            if (event.key === "Escape" && document.activeElement === searchInput && searchInput.value) {
+                searchInput.value = "";
+                state.query = "";
+                renderIcons();
+            }
+        });
+
+        createCategoryOptions();
+        createStyleButtons();
+        iconGrid.style.setProperty("--icon-size", `${state.size}px`);
+        renderIcons();
     </script>
 </body>

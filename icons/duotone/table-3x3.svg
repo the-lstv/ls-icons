@@ -1,9 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 15H8V22H5C3.34315 22 2 20.6569 2 19V15Z" fill="#616161"/>
-<path d="M15 15V22H9V15H15Z" fill="#616161"/>
-<path d="M22 19C22 20.6569 20.6569 22 19 22H16V15H22V19Z" fill="#616161"/>
-<path d="M2 8H8V14H2V8Z" fill="#616161"/>
-<path d="M22 14H16V8H22V14Z" fill="#616161"/>
-<path d="M15 8V14H9V8H15Z" fill="#616161"/>
+<path d="M2 15H8V22H5C3.34315 22 2 20.6569 2 19V15Z" fill="white" fill-opacity="0.3"/>
+<path d="M15 15V22H9V15H15Z" fill="white" fill-opacity="0.3"/>
+<path d="M22 19C22 20.6569 20.6569 22 19 22H16V15H22V19Z" fill="white" fill-opacity="0.3"/>
+<path d="M2 8H8V14H2V8Z" fill="white" fill-opacity="0.3"/>
+<path d="M22 14H16V8H22V14Z" fill="white" fill-opacity="0.3"/>
+<path d="M15 8V14H9V8H15Z" fill="white" fill-opacity="0.3"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M19 2C20.6569 2 22 3.34315 22 5V8H16V14H22V15H16V22H15V15H9V22H8V15H2V14H8V8H2V5C2 3.34315 3.34315 2 5 2H19ZM9 14H15V8H9V14Z" fill="white"/>
 </svg>
