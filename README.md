@@ -4,16 +4,18 @@
 LS.Icons is an open-source icon library designed by Lukas, primarily used with [LS](https://github.com/the-lstv/LS), but available for anyone.<br>
 This is the 3rd major version (or rather 3rd attempt) after a long time and is **still work in progress**.
 
-So far there is 138 icons (each in 6 styles = 828 icons), and I am working on more.<br> 
-They're not perfect (still working things out), but I hope you like them!<br> 
-Feel free to suggest icons or give feedback, I'm happy to help.
+> Note: There's currently a bug with the export script and some icons are a bit incorrectly offset. I am working on a fix
+
+So far there is 184 icons (each in 6 styles = 1,104 icons), and I am working on new ones or refining them every once in a while.<br> 
+They're not perfect (still working things out, also on the technical side), but I hope you like them!<br> 
+Feel free to suggest icons or give feedback, I wold love to hear from you!
 
 <img width="391" height="478" alt="Screenshot from 2026-03-29 19-54-41" src="./preview.png" />
 
 ## Comming soon
 - Icon browser
 - Organize styles & enhance iconfont
-- More icons (goal is at least 200 by 3.1, then 500, then 1000, then finally 1500/2000+ and I'll be happy)
+- More icons (goal is ~200, then 500, then 1000, then finally 1500/2000+)
 
 ## Changes compared to 2.0
 - Removed outline-thin and fill-bold styles for simplicity.
