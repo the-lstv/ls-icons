@@ -1,6 +1,6 @@
 <head>
     @use(ls:5.2.9[flat, color, modal, menu, animation, range], google-fonts[Poppins]);
-    @use("~/iconfont/style.css");
+    @use("~/iconfont/style.css", ~/index.json["iconindex"]);
     @page font: "Poppins", sans-serif;
 </head>
 
@@ -62,10 +62,6 @@
             </section>
         </main>
     </div>
-
-    <template id="iconIndex">
-        @importRaw ('~/index.json');
-    </template>
 
     <style>
         html,
@@ -431,8 +427,8 @@
         }
 
         const getIndexData = () => {
-            const template = document.getElementById("iconIndex");
-            const raw = template && template.content ? template.content.textContent : "[]";
+            const data = document.getElementById("iconindex");
+            const raw = data ? data.textContent : null;
             try {
                 const parsed = JSON.parse(raw || "[]");
                 if (!Array.isArray(parsed)) {
@@ -451,8 +447,8 @@
             }
         };
 
-        const iconIndex = getIndexData();
-        const searchable = iconIndex.map((icon) => ({
+        const iconindex = getIndexData();
+        const searchable = iconindex.map((icon) => ({
             icon,
             queryText: normalize([
                 icon.name,
@@ -526,7 +522,7 @@
 
         const createCategoryOptions = () => {
             const categories = new Set();
-            for (const icon of iconIndex) {
+            for (const icon of iconindex) {
                 for (const category of icon.categories) {
                     categories.add(category);
                 }
